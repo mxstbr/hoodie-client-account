@@ -46,6 +46,7 @@ function Account (options) {
     },
     on: events.on.bind(this, state),
     one: events.one.bind(this, state),
-    off: events.off.bind(this, state)
+    off: events.off.bind(this, state),
+    validate: require('./lib/validate').bind(this, state)
   }
 }
